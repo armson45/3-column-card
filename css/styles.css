@@ -1,0 +1,93 @@
+@import url(/css/reset.css);
+@import url(/css/fonts.css);
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white-p: hsla(0, 0%, 100%, .75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car__type {
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: var(--light-gray);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-block: 1rem;
+}
+
+.cars-component {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+
+.car {
+    flex: 1 1 200px;
+    padding: 4.5em 4em;
+}
+
+.car__info {
+    min-height: 259px;
+}
+
+.learn-more-btn {
+    margin-top: 1.5rem;
+    text-transform: capitalize;
+    display: inline-block;
+    background-color: hsl(0, 0%, 100%);
+    padding: .8em 2em;
+    border-radius: 1.5rem;
+    margin-bottom: auto;
+}
+
+.car__text {
+    color: var(--transparent-white-p);
+}
+
+.car:nth-child(1) {
+    background-color: var(--bright-orange);
+
+    & .car__info a {
+        color: var(--bright-orange);
+    }
+}
+
+.car:nth-child(2) {
+    background-color: var(--dark-cyan);
+
+    & .car__info a {
+        color: var(--dark-cyan);
+    }
+}
+
+.car:nth-child(3) {
+    background-color: var(--very-dark-cyan);
+
+    & .car__info a {
+        color: var(--very-dark-cyan);
+    }
+}
+
+.car img {
+    width: 4rem;
+}
+
+@media (width > 42em) {
+    .car {
+        padding: 5.5em 2em;
+    }
+}
